@@ -1,0 +1,9 @@
+.CardList {
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.CardWrapper {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,7 @@
+.CardList {
+    text-align: center;
+}
+
+.CardList > div {
+    display: inline-block;
+}
