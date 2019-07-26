@@ -1,0 +1,3 @@
+export {
+    initLoadingPosts
+} from './quickAdd';
