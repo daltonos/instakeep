@@ -23,27 +23,33 @@ import Button from '@material-ui/core/Button';
 
 class QuickAddBar extends Component {
     state = {
-        hasSomething: false
+        hasSomething: false,
+        textToAdd: ''
     }
 
     handleChange = ({ target }) => {
         console.log("handling change", target.value);
         this.setState({
             hasSomething: target.value ? true : false,
+            textToAdd: target.value
         });
+    };
+
+    handleDone = () => {
+        console.log("Will save ", this.state.textToAdd);
     };
 
     render () {
         return (
             <Aux>
                 <div>
-                    <input placeholder="something" onChange={this.handleChange}></input>
+                    <input placeholder="something" onChange={this.handleChange} value={this.state.textToAdd}></input>
                     <Button color="primary">
                         Add Picture
                     </Button>
                 </div>
                 {this.state.hasSomething ? (<div>
-                    <Button color="secondary">
+                    <Button color="secondary" onClick={this.handleDone}>
                         Done
                     </Button>
                 </div>) : null}
