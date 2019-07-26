@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import CardList from '../../UIComponents/CardList/CardList';
 import styles from "./QuickAdd.module.css";
+import QuickAddBar from '../QuickAddBar/QuickAddBar';
+import Aux from '../../hoc/Aux'
+
 
 class QuickAdd extends Component {
     state = {
@@ -12,12 +15,16 @@ class QuickAdd extends Component {
             {id: 3, title: "Card 4", desc: "Something I need to remember 4"},
         ]
     };
+    
     render () {
         let cardList = (
+            <Aux>
                 <div className={styles.CardList}>
                     <CardList cards={this.state.cards}/>
                 </div>
-            )
+                <QuickAddBar />
+            </Aux>
+        )
         return cardList;
         
     };
