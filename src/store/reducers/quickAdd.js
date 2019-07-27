@@ -8,10 +8,10 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.LOAD_POSTS_START:
+        case actionTypes.LOAD_POSTS_SUCCESS:
             return {
                 ...state,
-                posts: [1]
+                posts: action.posts
             }
         default: return state;
     }
