@@ -13,6 +13,7 @@ class QuickAdd extends Component {
     
     componentDidMount () {
         this.props.initLoadingPosts();
+        //some comment
     }
 
     render () {
